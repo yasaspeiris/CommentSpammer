@@ -1,6 +1,10 @@
 # CommentSpammer
 Spam comments on a friend's Facebook post using Selenium and Python
 
+
+https://github.com/yasaspeiris/CommentSpammer/blob/main/Images/Capture.JPG
+
+
 ## Instructions
 
 Requires selenium
