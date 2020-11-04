@@ -20,3 +20,4 @@ py -3 -m pip install selenium
 This script is poorly written and relies on time delays to work. 
 
 PS - Facebook will step in and stop you from commenting after a while.
+PSS - I have questionable moral values.
