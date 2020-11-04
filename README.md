@@ -4,6 +4,7 @@ Spam comments on a friend's Facebook post using Selenium and Python
 ## Instructions
 
 Requires selenium
+
 py -3 -m pip install selenium
 
 1. Download a suitable version of chrome driver. https://chromedriver.chromium.org/downloads. Change the path for the downloaded chromedriver.exe
