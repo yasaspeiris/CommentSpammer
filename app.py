@@ -1,21 +1,15 @@
 from selenium import webdriver
 import time
-#import uuid 
 import random
-
-
-nouns = ("isuru", "sandakath", "rusiru", "shakya", "rusith")
-fingers = ("one", "two", "three", "four", "five") 
-adj = ("adorable", "cute", "dirty", "lovely", "happy")
-
+import sentencegen as gen
 
 def commentspam(num,timedelta,postURL):
     #your credentials here
-    userId = "<USERNAME>"
-    password = "<PW>"
+    userId = "<YOUR FB USERID>"
+    password = "<YOUR PASSWORD>"
 
     #need chromedriver for your current chrome version
-    browser = webdriver.Chrome("C:\\Users\\yasas\\Downloads\\chromedriver_win32\\chromedriver.exe")
+    browser = webdriver.Chrome("D:\\chromedriver.exe")
     
     fbURL = "https://m.facebook.com"
     browser.get(fbURL)
@@ -43,9 +37,7 @@ def commentspam(num,timedelta,postURL):
     for i in range(num):
         time.sleep(timedelta)
         commentBox = browser.find_element_by_id("composerInput")
-        num = random.randrange(0,5)
-        num2 = random.randrange(0,5)
-        comment = adj[num]+ ' ' + nouns[num] + ' puts ' + fingers[num]+ ' finger(s) up ' +  nouns[num2] +"'s bum."
+        comment = gen.MakeSentence()
         try:
             commentBox.send_keys(comment)
         except:
@@ -74,4 +66,4 @@ def commentspam(num,timedelta,postURL):
                 except:
                     pass
         
-commentspam(5000,8,"https://m.facebook.com/isuruedirisinghe80/posts/10223803470577655")
+commentspam(5000,8,"<URL OF YOUR TARGETED FACEBOOK POST>")
